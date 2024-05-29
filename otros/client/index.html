@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Simple con MercadoPago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+
+
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bienvenido a mi Página Web Simple con MercadoPago</h1>
+    <p>Esta es una página web muy básica creada con HTML y CSS.</p>
+    <p>Aquí puedes agregar más contenido según tus necesidades.</p>
+</div>
+
+<!-- Script de MercadoPago -->
+<section>
+    <h3>Producto<span id='product-description'>Un libro</span></h3>
+    <h3>precio<span id='unit-price'>10</span></h3>
+    <h3>Quantity<span id="quantity">1</span></h3>  
+</section>
+<div id="button-checkout"></div>
+<script src="index.js"></script>
+
+</body>
+</html>
