@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 9090; // Define el puerto del servidor
+const port = 80; // Define el puerto del servidor
 
 // Crear una ruta para la página principal
 app.get('/', (req, res) => {
