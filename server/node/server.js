@@ -1,4 +1,6 @@
 const express = require("express");
+const https = require('https');
+const fs = require('fs');
 const app = express();
 const cors = require("cors");
 const mercadopago = require("mercadopago");
@@ -52,7 +54,19 @@ app.get('/feedback', function (req, res) {
 		MerchantOrder: req.query.merchant_order_id
 	});
 });
-
+/*
 app.listen(8080, () => {
 	console.log("The server is now running on Port 8080");
+});
+
+*/
+// Opciones para el servidor HTTPS
+const options = {
+    key: fs.readFileSync('server.key'),
+    cert: fs.readFileSync('server.crt')
+};
+
+// Crea un servidor HTTPS con Express
+https.createServer(options, app).listen(8080, () => {
+    console.log('Servidor HTTPS corriendo en el puerto 8080');
 });
