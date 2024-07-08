@@ -67,6 +67,6 @@ const options = {
 };
 
 // Crea un servidor HTTPS con Express
-https.createServer(options, app).listen(8080, () => {
-    console.log('Servidor HTTPS corriendo en el puerto 8080');
+https.createServer(options, app).listen(443, () => {
+    console.log('Servidor HTTPS corriendo en el puerto https');
 });
